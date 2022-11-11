@@ -1,0 +1,11 @@
+body {
+  font-family: sans-serif;
+}
+
+#map {
+  height: 100vh;
+}
+
+.leaflet-heatmap-layer {
+  opacity: 0.5;
+}
