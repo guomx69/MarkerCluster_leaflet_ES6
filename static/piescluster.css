@@ -4,32 +4,39 @@
   bottom: 0;
   width: 100%;
 }
-#legend {
-  position: absolute;
-  width: 100%;
-  top: 3px;
-  right: 3px;
-  margin: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  z-index: 1000;
-  font-size: 1em;
-  font-family: sans-serif;
-  width: 160px;
-  background: rgba(255,255,255,0.5);
-}
 .legendheading {
-
-  height: 25px;
-  padding: 5px 2px 4px 2px;
+  height: 10px;
   font-size: larger;
   font-weight: bold;
 }
-.legenditem {
-  padding: 2px;
-  margin-bottom: 4px;
+.legend {
+  line-height: 28px;
+  color: #555;
 }
 
+.legend i {
+  /* shape of legend's icon*/
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.9;
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/20px Arial, Helvetica, sans-serif;
+  /* size legend */
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
 /*Marker clusters*/
 .marker-cluster-pie g.arc{
   fill-opacity: 0.5;

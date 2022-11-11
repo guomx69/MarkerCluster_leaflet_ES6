@@ -1,5 +1,5 @@
 import L from "leaflet";
-import { arr } from "./json";
+import { arr } from "../data/heaterdata";
 
 export const heaterMarker=(map)=>{
   const polygon = arr.map(({ bLatitude, bLongitude }) => [

@@ -95,14 +95,13 @@ const _define_feature_marker=(feature, latlng)=> {
  /*Function for generating a legend with the same categories as in the clusterPie*/
 const _render_legend=(mtdata)=>{
     var data = Object.entries(mtdata.fields[CategoryField].lookup),
-      legenddiv = d3.select('body').append('div').attr('id','legend');
-      
-      legenddiv.append('div').classed('legendheading', true).text(mtdata.fields[CategoryField].name);
+      legenddiv = L.DomUtil.create('div','info legend') //d3.select('body').append('div').attr('id','legend');
 
-      var legenditems = legenddiv.selectAll('.legenditem').data(data);
-        
-       //console.log("abc",data);
-       legenditems.enter().append('div').attr('class',(d)=>'category-'+d[0]).classed('legenditem',true).text((d)=>d[1]);
+      let legends=[`<div class="legendheading">${mtdata.fields[CategoryField].name}</div>`];
+      data.forEach(d=>{
+         legends.push(`<i class="category-${d[0]}"></i>${d[1]}`)
+      })
+      legenddiv.innerHTML= legends.join('<br/>')
 
        return legenddiv;
   }
@@ -139,10 +138,10 @@ const pie_markers= async(map)=>{
             mrkClsterLyr.addLayer(markers);
             map.fitBounds(markers.getBounds());
             map.attributionControl.addAttribution(metadata.attribution);
-            // let cstLegend=L.control({position:'bottomleft'});
-            // cstLegend.onAdd=_render_legend(metadata);
-            // cstLegend.addTo(map);
-            _render_legend(metadata);
+            let cstLegend=L.control({position:'topright'});
+            cstLegend.onAdd=(map)=>_render_legend(metadata,map);
+            cstLegend.addTo(map);
+            //_render_legend(metadata);
               
           } 
           else {

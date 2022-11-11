@@ -1,5 +1,5 @@
 
-export const GeoJsonPath = './libs/traffic_accidents.geojson',
+export const GeoJsonPath = './data/traffic_accidents.geojson',
 PopupFieds = ['5065','5055','5074'], //Popup will display these fields
 CategoryField = '5074', //This is the fieldname for marker category (used in the pie and legend)
 IconField = '5065', //This is the fieldame for marker icon
