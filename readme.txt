@@ -5,7 +5,7 @@
     3) npm run dev
     
     see the screenshot for the upgrade:
-    https://github.com/guomx69/MarkerCluster_leaflet_ES6/blob/main/static/screenshot.png
+    http://129.146.60.162:8080/
     
     the references:
     http://bl.ocks.org/gisminister/10001728
