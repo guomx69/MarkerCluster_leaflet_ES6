@@ -4,7 +4,7 @@
     2) npm install (all the packages in packages.json)
     3) npm run dev
     
-    see the screenshot for the upgrade:
+    see the live demo below:
     http://129.146.60.162:8080/
     
     the references:
