@@ -1,4 +1,4 @@
-    This project is to upgrade the leaflet pie marker cluster using ES6.
+    This project is to upgrade the leaflet pie marker cluster using ES6 Syntax.
     
     1) npm create vite@latest
     2) npm install (all the packages in packages.json)
